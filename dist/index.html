@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- page title -->
+		<title>Javascript | Music Player</title>
+		<!-- include jQuery library -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+			defer
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+		<link rel="manifest" href="images/site.webmanifest" />
+		<!-- include jQuery library local file if cdn link doesn't work -->
+		<script>
+			window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js" defer><\/script>');
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<a class="accessibility" href="#main">Skip to Content</a>
+		<noscript>
+			<div>Javascript must be enabled for the correct page display</div>
+		</noscript>
+		<div class="wrapper">
+			<header class="header">
+				<!-- header content -->
+			</header>
+			<div class="page-holder">
+				<main class="main" id="main">
+					<section class="music-block bg-blue-950 min-h-screen w-full">
+						<figure class="card-img absolute -z-1 opacity-10 pointer-events-none">
+							<img src="images/img1.jpg" alt="Song" class="w-full h-full object-cover" />
+						</figure>
+						<div class="contianer max-w-[1200px] mx-auto">
+							<div class="music-wrapper flex items-center justify-center min-h-screen">
+								<div class="music">
+									<audio src="" id="audio"></audio>
+									<div class="card text-gray-200 rounded-3xl bg-slate-400 p-10 bg-opacity-30 w-[320px] md:w-[400px] text-center overflow-hidden">
+										<div class="card-top">
+											<h1 class="music-name font-semibold text-[22px] md:text-[28px]">Music Name</h1>
+											<span class="music-artist block mb-5">Artist Name</span>
+											<figure
+												class="card-img aspect-square w-36 rounded-full overflow-hidden mx-auto mb-10 relative shadow-lg shadow-purple-500/50 before:content-[''] before:absolute before:bg-[#3D4B73] before:w-11 before:h-11 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2"
+											>
+												<img src="images/img1.jpg" alt="Song" class="w-full h-full object-cover" />
+											</figure>
+										</div>
+										<div class="card-slider w-full relative pb-5">
+											<input type="range" value="0" class="card-bar overflow-hidden appearance-none w-full h-[5px] rounded-3xl bg-purple-500" />
+											<span class="current-time absolute left-0 bottom-0">00:00</span>
+											<span class="total-time absolute right-0 bottom-0">00:00</span>
+										</div>
+										<div class="card-controls w-full flex items-center mx-auto mt-5">
+											<button class="btn-prev flex items-center justify-center text-[20px] w-10 h-10 bg-purple-300 rounded-full text-purple-900">
+												<i class="ri-arrow-left-s-line"></i>
+											</button>
+											<button class="btn-play pause relative w-14 h-14 rounded-full bg-purple-300 cursor-pointer mx-auto">
+												<span></span>
+												<span></span>
+											</button>
+											<button class="btn-next flex items-center justify-center text-[20px] w-10 h-10 bg-purple-300 rounded-full text-purple-900">
+												<i class="ri-arrow-right-s-line"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+			</div>
+			<footer class="footer">
+				<!-- footer content -->
+			</footer>
+		</div>
+		<script defer src="js/app.js"></script>
+	</body>
+</html>
